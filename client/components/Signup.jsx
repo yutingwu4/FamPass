@@ -55,10 +55,10 @@ function SignUpPage(props) {
     history.push('/home')
   }
     return (
-      <div className='loginPage text-center'>
-        <div>
+      <div id='loginbackground' className='loginPage text-center d-flex flex-column-reverse align-items-center justify-content-center'>
+        <div className='col-10'>
           <div id="nameAvailabiltiy" style={{visibility: state.visible, color: "red"}}>Username already in use.</div>
-          <form className='form-signin mt-5'>
+          <form className='form-signin'>
             <label htmlFor='username' className='sr-only'>Username</label>
             <input
               type='text'

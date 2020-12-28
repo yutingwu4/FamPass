@@ -53,10 +53,10 @@ function LoginPage(props) {
     history.push('/signup');
   };
   return (
-    <div className='loginPage text-center'>
+    <div id='loginbackground' className='loginPage text-center d-flex flex-column-reverse align-items-center justify-content-center'>
       
-      <div>
-        <form className="form-signin mt-5">
+      <div className='col-10'>
+        <form className="form-signin">
         <label htmlFor="username" className="sr-only">Username</label>
           <input
             type='text'
@@ -80,10 +80,11 @@ function LoginPage(props) {
           <a href="/signup">Create account</a>
         </form>
       </div>
-
+     
       {/* <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"></img> */}
       <h1 className="h3 mb-3 mt-5 font-weight-normal">- Welcome to FamPass -</h1>
     </div>
+    
   );
 }
 
