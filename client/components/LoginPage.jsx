@@ -37,8 +37,12 @@ function LoginPage(props) {
             ...prevState,
             Authentication: 'true',
           }));
+          sessionStorage.setItem('loggedInUser', state.username.toLowerCase());
           redirectToHome();
           props.setLocalUser(state);
+
+          //memory of logged in username to persist
+          // console.log(sessionStorage.getItem('loggedInUser'))
         }
       });
     } else {

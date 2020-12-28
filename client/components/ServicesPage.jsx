@@ -15,7 +15,7 @@ function ServicesPage(props) {
       })
       .then((data) => {
         const userFams = data
-          .filter((el) => el.username === props.local_user.username)
+          .filter((el) => el.username === sessionStorage.getItem('loggedInUser'))
           .map((el) => el.family_name);
         props.setExtFamily(userFams);
       })
@@ -26,7 +26,7 @@ function ServicesPage(props) {
             return response.json();
           })
           .then((data) => {
-            console.log('data', data);
+            // console.log('data', data);
             const familyServices = data.filter((el) =>
               props.extFamily.includes(el.family_name)
             );
@@ -39,21 +39,24 @@ function ServicesPage(props) {
                   family_name={extFamilyService[i].family_name}
                   local_user={extFamilyService[i].local_user} //this local_user(from db) is one who is sharing the service
                   service={extFamilyService[i].service}
+                  service_logo={extFamilyService[i].service_logo}
+                  login_link={extFamilyService[i].login_link}
                 />
               );
             }
             setServices(servicesArr);
+            console.log('services', services);
           });
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [services]);
 
   return (
     <div className='d-flex'>
       <div className='col-3 px-0'>
         <SideBar
           switchTo='View my families'
-          local_user={props.local_user.username}
+          local_user={sessionStorage.getItem('loggedInUser')}
         />
       </div>
       <div className='col-8 mt-5 pt-5 ml-5'>

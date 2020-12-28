@@ -24,16 +24,15 @@ function App() {
           </Route>
           {/* after verification, login page routes to /home that renders WelcomePage */}
           <Route exact path='/home'>
-            <WelcomePage local_user={local_user} />
+            <WelcomePage />
           </Route>
 
           <Route exact path='/family'>
-            <FamilyPage local_user={local_user} />
+            <FamilyPage />
           </Route>
 
           <Route exact path='/services'>
             <ServicesPage
-              local_user={local_user}
               extFamily={extFamily}
               setExtFamily={setExtFamily}
             />

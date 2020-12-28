@@ -10,7 +10,7 @@ servicesController.addServicesLogin = (req, res, next) => {
   let service_logo;
   if (service === 'Netflix') {
     login_link = 'https://www.netflix.com/login';
-    service_logo = 'https://cdn.vox-cdn.com/thumbor/AwKSiDyDnwy_qoVdLPyoRPUPo00=/39x0:3111x2048/1400x1400/filters:focal(39x0:3111x2048):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/49901753/netflixlogo.0.0.png';
+    service_logo = 'https://i.pinimg.com/originals/f6/97/4e/f6974e017d3f6196c4cbe284ee3eaf4e.png';
   }
   // encode password to base64
   service_password = Base64.encode(service_password); // use atob() to decode in chrome extension

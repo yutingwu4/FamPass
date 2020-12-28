@@ -62,7 +62,7 @@ function SideBar(props) {
       </div>
 
       <p className='text-center' style={{ color: 'white' }}>
-        {props.local_user}
+        {sessionStorage.getItem('loggedInUser')}
       </p>
       <p className='text-center' style={{ color: 'white' }}>
         Plan Type

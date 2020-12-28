@@ -28,7 +28,7 @@ function FamilyPage(props) {
       .get('api/families/allfamilies')
       .then((result) => {
         const userFams = result.data.filter(
-          (el) => el.username === props.local_user.username
+          (el) => el.username === sessionStorage.getItem('loggedInUser')
         );
         setFamilies(userFams);
       })
@@ -52,7 +52,7 @@ function FamilyPage(props) {
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
     setTimeout(() => {
-      const local_user = props.local_user.username;
+      const local_user = sessionStorage.getItem('loggedInUser');
       axios
         .post('/api/families/add-family-member', {
           family_name,
@@ -75,7 +75,7 @@ function FamilyPage(props) {
     <div className='d-flex'>
       <div className='col-3 px-0'>
         <SideBar
-          local_user={props.local_user.username}
+          local_user={sessionStorage.getItem('loggedInUser')}
           switchTo='View shared services'
         />
       </div>
@@ -87,7 +87,7 @@ function FamilyPage(props) {
               families={families}
               family_name={data.family_name}
               key={i}
-              local_user={props.local_user.username}
+              local_user={sessionStorage.getItem('loggedInUser')}
             />
           );
         })}
