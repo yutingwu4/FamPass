@@ -4,6 +4,7 @@ const servicesController = {};
 // adds login information to service login info database
 servicesController.addServicesLogin = (req, res, next) => {
   // take content of req.body and assign to variables to pass to DB query
+  console.log('in serviceController');
   let { local_user, service, service_username, service_password } = req.body;
   // determine service being added and get corresponding login link and logo
   let login_link;
@@ -12,25 +13,13 @@ servicesController.addServicesLogin = (req, res, next) => {
     login_link = 'https://www.netflix.com/login';
     service_logo = 'https://i.pinimg.com/originals/f6/97/4e/f6974e017d3f6196c4cbe284ee3eaf4e.png';
   }
-  // encode password to base64
-  service_password = Base64.encode(service_password); // use atob() to decode in chrome extension
-  // values to pass into database query
-  const params = [
-    local_user,
-    service,
-    service_username,
-    service_password,
-    login_link,
-    service_logo
-  ];
+  if (service === 'Hulu') {
+    login_link = 'https://auth.hulu.com/web/login?next=https%3A%2F%2Fwww.hulu.com%2Fmy-stuff';
+    service_logo = 'https://www.pngfind.com/pngs/m/665-6657674_hulu-icon-free-download-at-icons8-hulu-logo.png';
+  }
   // values for first query - to determine whether login info already exists
   const verifyParams = [local_user, service];
   // first query: whether login information is already in DB
-  db.query(
-    `SELECT * FROM service_login WHERE (local_user = $1 AND service = $2);`,
-    verifyParams
-  )
-    .then((data) => {
       if (data.rows.length) {
         // if something is returned, then the entry already exists
         res.locals.status = 'service exists';
@@ -45,9 +34,7 @@ servicesController.addServicesLogin = (req, res, next) => {
             return next();
           })
           .catch((err) => next({ err }));
-      }
-    })
-    .catch((err) => next({ err }));
+  };
 };
 // will return table with family names and available services
 // gets arr of objs w/ format: family_name, local_user, service, login_link, service_logo
@@ -101,4 +88,4 @@ servicesController.deleteServicesLogin = (req, res, next) => {
     })
     .catch((err) => next({ err }));
 };
-module.exports = servicesController;
+module.exports = servicesController;module.exports = servicesController;

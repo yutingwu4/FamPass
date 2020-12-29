@@ -38,7 +38,7 @@ function SideBar(props) {
     <div
       style={{
         backgroundColor: 'rgb(13, 59, 102)',
-        height: '100%',
+        height: '100vh',
         border: 'solid 1px rgb(188, 198, 207)',
       }}
       className='d-flex flex-column align-items-center justify-content-start'

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function WelcomeDisplay(props) {
   //display logged in username
-  const local_user = sessionStorage.loggedInUser;
+  const local_user = sessionStorage.getItem('loggedInUser');
 
   const history = useHistory();
   const redirectToFamily = (e) => {

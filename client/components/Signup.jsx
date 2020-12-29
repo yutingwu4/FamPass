@@ -37,6 +37,7 @@ function SignUpPage(props) {
             setState(prevState => ({
               ...prevState,
             }))
+            sessionStorage.setItem('loggedInUser', state.username.toLowerCase());
             redirectToHome();
             props.setLocalUser(state);
           }
