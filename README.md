@@ -34,9 +34,9 @@ Back-end approach
 2) Add route to permit addition of members to families of which user is already a member without providing family passwords
 
 FamilyPage
-1) Drop down menu for adding/deleting members within each family
+1) Add drop down menu for adding/deleting members within each family
 2) Sidebar component: track and render profile icons for all users in one user account
-3) User to be able to go from page-to-page without needing to refresh after each CRUD operation by allowing for real time updating of information displayed through the use of websockets
+3) Modify UX to allow real-time updating of information displayed through the use of websockets, so that users can go from page-to-page without the need to refresh after each CRUD operation
 
 ServicesPage
 1) Add/delete service based on which user is sharing said service
