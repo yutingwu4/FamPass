@@ -31,7 +31,7 @@ Chrome extension: popup, background, content
 
 Back-end approach
 1) Edit back-end queries to filter through data more specifically before passing to front-end, via POST requests rather than GET requests
-2) Add route to permit addition of members to families of which user is already a member without providing family password and modify frontend accordingly
+2) Add route to permit addition of members to families of which user is already a member without providing family passwords
 
 FamilyPage
 1) Drop down menu for adding/deleting members within each family
