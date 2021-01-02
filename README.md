@@ -1,6 +1,7 @@
 FamPass
 
 *Summary*
+
 In this scratch-project, FamPass allows users to share accounts from a centralized website without exposing their real passwords.
 
 *How to use*
