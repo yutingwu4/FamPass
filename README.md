@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this scratch-project, FamPass allows users to share accounts from a centralized website without exposing their real passwords.
+FamPass allows users to share accounts from a centralized website without exposing their real passwords.
 
 ## How to Use
 1) Load the google chrome extension and connect to a postgreSQL DB model.
