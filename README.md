@@ -10,7 +10,7 @@ In this scratch-project, FamPass allows users to share accounts from a centraliz
 3) Create a family or join a family by inputting the family’s unique name and password. 
 4) Add families and share services as needed.
 
-## Learning objectives
+## Tech Stack
 
 Front-end technologies:
 
