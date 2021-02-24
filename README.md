@@ -4,7 +4,7 @@
 
 FamPass allows users to share accounts from a centralized website without exposing their real passwords.
 
-## How to Use
+## Getting Started
 1) Load the google chrome extension and connect to a postgreSQL DB model.
 2) Start the server and create a user. 
 3) Create a family or join a family by inputting the family’s unique name and password. 
