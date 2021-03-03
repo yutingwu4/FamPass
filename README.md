@@ -4,17 +4,30 @@
 
 FamPass allows users to share accounts from a centralized website without exposing their real passwords.
 
+
 ## Getting Started
-1) Load the google chrome extension and connect to a postgreSQL DB model.
-2) Start the server and create a user. 
+
+![LoginPage2](https://user-images.githubusercontent.com/74384669/109883110-c1b36a00-7c2f-11eb-8ba0-00c9348c0529.PNG)
+
+1) Connect to a postgreSQL DB model and start the server.
+2) Load the google chrome extension.  Login or create a user. 
+
+![SignupPage_clean150](https://user-images.githubusercontent.com/74384669/109884046-31762480-7c31-11eb-872c-91cb35ac5d55.png)
+
 3) Create a family or join a family by inputting the family’s unique name and password. 
+
+![FamilyPage_clean](https://user-images.githubusercontent.com/74384669/109884445-d09b1c00-7c31-11eb-9eec-5bb70c6574cd.png)
+
 4) Add families and share services as needed.
+
+![ServicesPage_clean](https://user-images.githubusercontent.com/74384669/109884591-1b1c9880-7c32-11eb-9856-89b0d8eefb41.png)
+
 
 ## Tech Stack
 
 Front-end technologies:
 
-1) React, react-router, react Hooks
+1) React, React Router, React Hooks
 2) Bootstrap
 3) Axios
 
@@ -27,7 +40,7 @@ Back-end technologies:
 Chrome extension: popup, background, content
 
 
-## Bugs to fix/Future optimizations
+## Future optimizations
 
 Back-end approach
 1) Edit back-end queries to filter through data more specifically before passing to front-end, via POST requests rather than GET requests
