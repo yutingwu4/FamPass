@@ -60,6 +60,9 @@ ServicesPage
 2) App will be able to access more service providers beyond Netflix, such as Hulu, Spotify, etc.
 3) Add the ability to control how many users are using each service at a time to stop owner from being unable to use their own service
 
+## Contributors
 
-
-
+- Derek Lam @DerekQuoc
+- Lihn Tran @Linhatran
+- Alex Wolinsky @aw2934
+- Julie Wu @yutingwu4
