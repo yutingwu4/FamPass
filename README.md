@@ -65,4 +65,4 @@ ServicesPage
 - Derek Lam @DerekQuoc
 - Lihn Tran @Linhatran
 - Alex Wolinsky @aw2934
--Julie Wu @yutingwu4
+- Julie Wu @yutingwu4
