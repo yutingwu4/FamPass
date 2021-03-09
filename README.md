@@ -14,6 +14,8 @@ FamPass allows users to share accounts from a centralized website without exposi
 
 ![SignupPage_clean150](https://user-images.githubusercontent.com/74384669/109884046-31762480-7c31-11eb-872c-91cb35ac5d55.png)
 
+![Dashboard_clean](https://user-images.githubusercontent.com/74384669/110538939-7a1e5980-80d9-11eb-9d5a-ff2570090aec.png)
+
 3) Create a family or join a family by inputting the family’s unique name and password. 
 
 ![FamilyPage_clean](https://user-images.githubusercontent.com/74384669/109884445-d09b1c00-7c31-11eb-9eec-5bb70c6574cd.png)
